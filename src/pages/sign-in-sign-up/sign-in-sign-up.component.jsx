@@ -6,6 +6,7 @@ const SignInSignUpPage = () => {
   return (
     <div className='sign-in-sign-up'>
       <SignIn />
+      {/* <SignUp /> */}
     </div>
   )
 };
