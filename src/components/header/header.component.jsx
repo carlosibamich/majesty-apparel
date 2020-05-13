@@ -33,3 +33,4 @@ const Header = ({ currentUser }) => {
 };
 
 export default Header;
+//export to App.js
