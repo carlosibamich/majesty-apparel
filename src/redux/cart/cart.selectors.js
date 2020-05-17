@@ -8,6 +8,12 @@ export const selectCartItems = createSelector(
 );
 //exported to cart-dropdown.component.js
 
+export const selectCartHidden = createSelector(
+  [selectCart],
+  cart => cart.hidden
+);
+//export to header.component.js
+
 export const selectCartItemsCount = createSelector(
   [selectCartItems],
   cartItems => cartItems.reduce(
@@ -16,3 +22,11 @@ export const selectCartItemsCount = createSelector(
   )
 );
 //exported to cart-icon.component.js
+
+export const selectCartTotal = createSelector(
+  [selectCartItems],
+  cartItems => cartItems.reduce(
+    (accQuantity, cartItem) => accQuantity + cartItem.quantity * cartItem.price,
+    0
+  )
+);
