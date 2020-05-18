@@ -10,3 +10,15 @@ export const addItem = item => ({
     payload: item
 });
 //export to collection-items.component.js
+
+export const removeItem = item => ({
+    type: CartActionTypes.REMOVE_ITEM,
+    payload: item
+})
+//eport to checkout-item.component.js
+
+export const clearItemFromCart = item => ({
+    type: CartActionTypes.CLEAR_ITEM_FROM_CART,
+    payload: item
+})
+//eport to checkout-item.component.js
