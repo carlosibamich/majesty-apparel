@@ -10,12 +10,12 @@ export const selectCollections = createSelector(
 
 export const selectCollectionsForPreview = createSelector(
   [selectCollections],
-  collections => Object.keys(collections).map(key => collections[key])
+  collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 );
-//export to collections-overview.component.js
+//export to collections-overview.component.js and App.js
 
-export const selectCollection = collectionUrlparam => createSelector(
+export const selectCollection = collectionUrlParam => createSelector(
   [selectCollections],
-  collections => collections[collectionUrlparam]
+  collections => collections ? collections[collectionUrlParam] : null
 );
 //export to collection.component.js
