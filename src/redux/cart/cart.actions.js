@@ -1,4 +1,4 @@
-import { CartActionTypes } from './cart.types';
+import CartActionTypes from './cart.types';
 
 export const toggleCartHidden = () => ({
     type: CartActionTypes.TOGGLE_CART_HIDDEN
@@ -15,10 +15,15 @@ export const removeItem = item => ({
     type: CartActionTypes.REMOVE_ITEM,
     payload: item
 })
-//eport to checkout-item.component.js
+//export to checkout-item.component.js
 
 export const clearItemFromCart = item => ({
     type: CartActionTypes.CLEAR_ITEM_FROM_CART,
     payload: item
 })
-//eport to checkout-item.component.js
+//export to checkout-item.component.js
+
+export const clearCart = () => ({
+    type: CartActionTypes.CLEAR_CART
+});
+//export to cart.sagas.js
